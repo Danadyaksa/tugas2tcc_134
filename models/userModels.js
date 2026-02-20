@@ -1,19 +1,16 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const User = require("../schema/User");
 
-const User = sequelize.define('User', {
-  username: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-    validate: { len: [3, 20] } // Best practice: validate at the model level
-  },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-    validate: { isEmail: true }
-  }
-});
+const findAll = async () => {
+  return await User.findAll({
+    attributes: ["id", "username", "email"],
+  });
+};
 
-module.exports = User;
+const create = async (userData) => {
+  return await User.create(userData);
+}
+
+module.exports = {
+  findAll,
+  create,
+};
