@@ -29,3 +29,7 @@ index.js --> untuk menjalankan server bisa juga server.js
 7. Buat file index.js untuk menjalankan server
 8. Sebelum menjalankan, buat dulu databasenya kalo eror
 9. Test API pake api.rest pake extenstion REST.API
+
+
+### Tambahan Diluar
+Bisa juga gak pake nodemon, tapi pake `node --watch . index.js` , nanti kalo bisa restart kalo ada perubahan ketika di save
