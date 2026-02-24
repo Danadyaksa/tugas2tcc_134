@@ -10,6 +10,7 @@ app.get("/", (req, res) => {
 });
 
 // Best practice: version your APIs
+require("./schema/User");
 app.use("/api/v1/users", userRoutes);
 
 // Sync Database & Start Server
