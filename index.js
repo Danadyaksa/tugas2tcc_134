@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 });
 
 // Setting Routes
-require("./schema/User"); // Untuk generate Tabel User
+require("./schema/User"); // Untuk generate Tabel Users
 app.use("/api/v1/users", userRoutes); // Untuk setting routes user
 
 // Sync Database dan Jalankan Server
