@@ -7,15 +7,12 @@ const userRoutes = require("./routes/userRoutes");
 const app = express();
 const cors = require("cors");
 
-// Cara 1. Izinkan Semua Origin (tidak disarankan untuk produksi)
-app.use(cors());
-
-// Cara 2. Izinkan Frontend tertentu (misal Vite di localhost:5173)
-// app.use(cors({
-//   origin: 'http://localhost:5173', // Alamat Vite kamu
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   credentials: true // Jika butuh kirim cookie/session
-// }));
+// Izinkan origin frontend lokal yang umum dipakai saat development
+app.use(cors({
+  origin: ['http://localhost', 'http://localhost:5173', 'http://127.0.0.1:5500'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // Jika butuh kirim cookie/session
+}));
 
 // Middleware untuk parsing JSON
 app.use(express.json());
