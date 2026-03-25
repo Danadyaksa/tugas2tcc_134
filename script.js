@@ -83,7 +83,7 @@ function editNote(id, judul, isi) {
 }
 
 async function deleteNote(id) {
-    if (!confirm('Cabut catatan ini dari papan?')) return;
+    if (!confirm('Hapus catatan ini?')) return;
 
     try {
         await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
