@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Notes.</h1>
+            <p>Created by 123230143</p>
+        </header>
+        
+        <main class="grid-layout">
+            <section class="form-section box">
+                <h2 class="section-title">Tulis Catatan</h2>
+                <input type="hidden" id="noteId">
+                
+                <div class="input-group">
+                    <label for="judul">Judul</label>
+                    <input type="text" id="judul" placeholder="Masukkan judul..." autocomplete="off" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="isi">Isi Catatan</label>
+                    <textarea id="isi" placeholder="Ketik sesuatu di sini..." rows="5" required></textarea>
+                </div>
+                
+                <button id="saveBtn" class="primary-btn" onclick="saveNote()">Simpan</button>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="section-title">Daftar Catatan</h2>
+                <div id="notesList" class="notes-container">
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
