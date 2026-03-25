@@ -1,6 +1,5 @@
-// GANTI INI JADI IP VM LO PAS DEPLOY! 
-// Contoh: const API_URL = 'http://35.192.11.187:3000/api/v1/notes';
-const API_URL = 'http://localhost:3000/api/v1/notes';
+const API_URL = 'http://35.192.11.187:3000/api/v1/notes';
+// const API_URL = 'http://localhost:3000/api/v1/notes';
 
 // Warna-warna pastel aesthetic buat sticky notes
 const colors = ['#ffdac1', '#ffb7b2', '#e2f0cb', '#b5ead7', '#c7ceea'];
@@ -23,7 +22,7 @@ async function fetchNotes() {
             
             // Pilih warna dan rotasi miring secara random biar natural
             const randomColor = colors[index % colors.length];
-            const randomRotation = Math.floor(Math.random() * 6) - 3; // Rotasi antara -3deg sampai 3deg
+            const randomRotation = Math.floor(Math.random() * 6) - 3; 
 
             notesList.innerHTML += `
                 <div class="sticky-note" style="background-color: ${randomColor}; transform: rotate(${randomRotation}deg);">
@@ -62,7 +61,6 @@ async function saveNote() {
             body: JSON.stringify({ judul, isi })
         });
 
-        // Reset Form
         document.getElementById('noteId').value = '';
         document.getElementById('judul').value = '';
         document.getElementById('isi').value = '';
