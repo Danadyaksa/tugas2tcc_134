@@ -1,6 +1,6 @@
 const express = require("express");
 const sequelize = require("./config/database");
-const noteRoutes = require("./routes/noteRoutes"); // Ganti ke Note
+const noteRoutes = require("./routes/noteRoutes"); 
 
 const app = express();
 const cors = require("cors");
@@ -17,9 +17,8 @@ app.get("/", (req, res) => {
   res.send("Hello World! API Notes Ready.");
 });
 
-// Setting Routes
-require("./schema/Note"); // Ganti ke Note
-app.use("/api/v1/notes", noteRoutes); // Endpoint diganti jadi /notes
+require("./schema/Note"); 
+app.use("/api/v1/notes", noteRoutes); 
 
 const port = process.env.PORT || 3000;
 sequelize.sync().then(() => {
