@@ -1,5 +1,5 @@
-const API_URL = 'http://35.192.11.187:3000/api/v1/notes';
-//const API_URL = 'http://localhost:3000/api/v1/notes';
+// const API_URL = 'http://35.192.11.187:3000/api/v1/notes';
+const API_URL = 'http://localhost:3000/api/v1/notes';
 
 const colors = ['#ffdac1', '#ffb7b2', '#e2f0cb', '#b5ead7', '#c7ceea'];
 

@@ -28,7 +28,7 @@ Content-Type: application/json
 
 {
   "judul": "ini update",
-  "isi": "notenya ke update"
+  "isi": "notenya update"
 }
 
 ###
